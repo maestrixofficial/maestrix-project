@@ -4,7 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 import CardHeader from '@/components/shared/CardHeader'
 import useCardTitleActions from '@/hooks/useCardTitleActions'
 import CardLoader from '@/components/shared/CardLoader'
-import { userOverviewChartOption } from '@/utils/chartsLogic/userOverviewChartoption'
+import { userOverviewChartOption } from '@/utils/chartsLogic/userOverviewChartOption.js'
 
 
 const UsersOverviewChart = ({ chartHeight = 280, isFooterShow = true }) => {
