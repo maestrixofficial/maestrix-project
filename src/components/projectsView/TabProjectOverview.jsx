@@ -231,7 +231,79 @@ const TabProjectOverview = () => {
                                 <p><span className="fw-semibold">Total Steps:</span> 5</p>
                                 <p><span className="fw-semibold">Total Tasks:</span> 25</p>
                             </div>
-                        </div></div>
+                            </div>
+                        
+                        </div>
+                        <div className="col-xl-12 col-md-6 mt-3">
+                            <div className="card stretch stretch-full">
+                                <div className="card-body">
+                                    <h6 className="fw-bold mb-3">Project Insights</h6>
+
+                                    {/* Success Rate Chart */}
+                                    <div className="d-flex align-items-center justify-content-between mb-4">
+                                        <div>
+                                            <p className="fw-semibold mb-1">Success Rate</p>
+                                            <h4 className="mb-0 text-success">92%</h4>
+                                        </div>
+                                        <div style={{ width: "100px", height: "100px" }}>
+                                            <ReactApexChart
+                                                options={{
+                                                    chart: { type: "radialBar", sparkline: { enabled: true } },
+                                                    plotOptions: {
+                                                        radialBar: {
+                                                            hollow: { size: "65%" },
+                                                            dataLabels: {
+                                                                show: true,
+                                                                name: { show: false },
+                                                                value: {
+                                                                    fontSize: "18px",
+                                                                    offsetY: 5,
+                                                                    formatter: () => "92%",
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                    colors: ["#4CAF50"],
+                                                }}
+                                                series={[92]}
+                                                type="radialBar"
+                                                height={100}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Bottleneck Steps */}
+                                    <div className="mb-4">
+                                        <p className="fw-semibold mb-2">Steps Users Spend Most Time On:</p>
+                                        <ul className="list-unstyled mb-0">
+                                            <li className="d-flex justify-content-between border-bottom py-2">
+                                                <span>Step 3: Data Input Form</span>
+                                                <span className="text-muted">Avg. 3m 40s</span>
+                                            </li>
+                                            <li className="d-flex justify-content-between border-bottom py-2">
+                                                <span>Step 5: Review Section</span>
+                                                <span className="text-muted">Avg. 2m 10s</span>
+                                            </li>
+                                            <li className="d-flex justify-content-between border-bottom py-2">
+                                                <span>Step 7: Submission</span>
+                                                <span className="text-muted">Avg. 1m 50s</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {/* Additional Stats */}
+                                    <div>
+                                        <p className="fw-semibold mb-2">Additional Insights:</p>
+                                        <ul className="list-unstyled mb-0">
+                                            <li>🟢 <strong>Completion Rate:</strong> 78%</li>
+                                            <li>👥 <strong>Active Users:</strong> 124 / 150</li>
+                                            <li>⭐ <strong>User Feedback Score:</strong> 4.6 / 5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         {/* <div className="col-xl-12 col-md-6">
                             <div className="card stretch stretch-full">

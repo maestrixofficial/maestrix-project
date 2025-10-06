@@ -10,6 +10,9 @@ import ProjectsTwo from '@/components/widgetsTables/ProjectsTwo'
 import ProjectReportChart from '@/components/widgetsCharts/ProjectReportChart'
 import TimeSpentChart from '@/components/widgetsCharts/TimeSpentChart'
 import EventCalendarSmall from '@/components/EventCalendarSmall'
+import ProjectsPickDropChart from '@/components/widgetsCharts/ProjectsPickDropChart'
+import ProjectSuccessChart from '@/components/widgetsCharts/ProjectsSuccessChart'
+import ProjectsStats from '@/components/widgetsTables/ProjectsStats'
 
 const ReportsProject = () => {
   return (
@@ -21,16 +24,19 @@ const ReportsProject = () => {
         <div className='row'>
           <ProjectDateLineMiscellaneous />
           {/* <ProjectReportChart /> */}
-          <div className="col-xxl-4">
+          {/* <div className="col-xxl-4">
             <div className="card stretch stretch-full">
               <EventCalendarSmall />
             </div>
-          </div>
-          <TimeSpentChart />
+          </div> */}
+          {/* <TimeSpentChart /> */}
           {/* <Progress title={"Team Progress"} footerShow={false} /> */}
-          <ActiveProject cardYSpaceClass="mb-4 pb-1" title="Active Project" />
-          <ProjectsTwo title={"Projects Stats"} className={"col-xxl-8"} />
-          <Schedule />
+          {/* <ActiveProject cardYSpaceClass="mb-4 pb-1" title="Active Project" /> */}
+          <ProjectsPickDropChart/><ProjectSuccessChart/>
+          {/* <ProjectsTwo title={"Projects Stats"} className={"col-xxl-8"} /> */}
+          <ProjectsStats title={"Projects Stats"} className={"col-xxl-8"} />
+
+          {/* <Schedule /> */}
         </div>
       </div >
       <Footer />
