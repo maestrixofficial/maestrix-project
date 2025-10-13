@@ -11,8 +11,23 @@ const NavigationManu = () => {
     useEffect(() => {
         setNavigationOpen(false)
     }, [pathName])
+
+
+    const [isCollapsed, setIsCollapsed] = React.useState(window.innerWidth <= 1024);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsCollapsed(window.innerWidth <= 1024);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
-        <nav className={`nxl-navigation ${navigationOpen ? "mob-navigation-active" : ""}`}>
+        <nav
+            className={`nxl-navigation ${isCollapsed ? "collapsed" : ""} ${navigationOpen ? "mob-navigation-active" : ""
+                }`}
+        >
             <div className="navbar-wrapper">
                 <div className="m-header">
                     <Link to="/" className="b-brand">
@@ -28,7 +43,7 @@ const NavigationManu = () => {
                             <li className="nxl-item nxl-caption">
                                 <label>Navigation</label>
                             </li>
-                            <Menus />
+                            <Menus isCollapsed={isCollapsed} />
                         </ul>
                         {/* <div className="card text-center">
                             <div className="card-body">

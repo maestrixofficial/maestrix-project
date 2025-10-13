@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { menuList } from "@/utils/fackData/menuList";
 import getIcon from "@/utils/getIcon";
 
-const Menus = () => {
+const Menus = ({isCollapsed}) => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [openSubDropdown, setOpenSubDropdown] = useState(null);
     const [activeParent, setActiveParent] = useState("");
@@ -52,11 +52,17 @@ const Menus = () => {
                     >
                         <Link to={path} className="nxl-link text-capitalize">
                             <span className="nxl-micon"> {getIcon(icon)} </span>
-                            <span className="nxl-mtext" style={{ paddingLeft: "2.5px" }}>
+                            {/* <span className="nxl-mtext" style={{ paddingLeft: "2.5px" }}>
                                 {name}
-                            </span>
+                            </span> */}
+                            {(
+                                <span className="nxl-mtext" style={{ paddingLeft: "2.5px" }}>
+                                    {name}
+                                </span>
+                            )}
+
                             {Array.isArray(dropdownMenu) && dropdownMenu.length > 0 && (
-                                <span className="nxl-arrow fs-16">
+                                <span className = {`nxl-arrow fs-16 ${openDropdown === name ? "rotate" : ""}`}>
                                     <FiChevronRight />
                                 </span>
                             )}

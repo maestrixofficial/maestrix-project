@@ -14,19 +14,21 @@ const ProfileModal = () => {
                     <div className="d-flex align-items-center">
                         <img src="/images/avatar/1.png" alt="user-image" className="img-fluid user-avtar" />
                         <div>
-                            <h6 className="text-dark mb-0">Alexandra Della <span className="badge bg-soft-success text-success ms-1">PRO</span></h6>
+                            <h6 className="text-dark mb-0">Alexandra Della
+                                {/* <span className="badge bg-soft-success text-success ms-1">PRO</span> */}
+                            </h6>
                             <span className="fs-12 fw-medium text-muted">alex.della@outlook.com</span>
                         </div>
                     </div>
                 </div>
                 <div className="dropdown">
-                    <a href="#" className="dropdown-item" data-bs-toggle="dropdown">
+                    {/* <a href="#" className="dropdown-item" data-bs-toggle="dropdown">
                         <span className="hstack">
                             <i className="wd-10 ht-10 border border-2 border-gray-1 bg-success rounded-circle me-2"></i>
                             <span>Active</span>
                         </span>
                         <i className="ms-auto me-0"><FiChevronRight /></i>
-                    </a>
+                    </a> */}
                     <div className="dropdown-menu user-active">
                         {
                             activePosition.map((item, index) => {
@@ -45,7 +47,7 @@ const ProfileModal = () => {
                         }
                     </div>
                 </div>
-                <div className="dropdown-divider"></div>
+                {/* <div className="dropdown-divider"></div>
                 <div className="dropdown">
                     <a href="#" className="dropdown-item" data-bs-toggle="dropdown">
                         <span className="hstack">
@@ -72,20 +74,20 @@ const ProfileModal = () => {
                         }
 
                     </div>
-                </div>
-                <div className="dropdown-divider"></div>
+                </div> */}
+                {/* <div className="dropdown-divider"></div> */}
                 <a href="#" className="dropdown-item">
                     <i ><FiUser /></i>
                     <span>Profile Details</span>
                 </a>
-                <a href="#" className="dropdown-item">
+                {/* <a href="#" className="dropdown-item">
                     <i ><FiActivity /></i>
                     <span>Activity Feed</span>
                 </a>
                 <a href="#" className="dropdown-item">
                     <i ><FiDollarSign /></i>
                     <span>Billing Details</span>
-                </a>
+                </a> */}
                 <a href="#" className="dropdown-item">
                     <i><FiBell /></i>
                     <span>Notifications</span>

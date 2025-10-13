@@ -14,7 +14,8 @@ const PageHeaderDate = () => {
     <>
       <div className="d-flex align-items-center gap-2 page-header-right-items-wrapper">
         <div className="position-relative date-picker-field" onClick={() => setToggleDateRange(!toggleDateRange)}>
-          <DateRange toggleDateRange={toggleDateRange} setToggleDateRange={setToggleDateRange} />
+          {/* <DateRange toggleDateRange={toggleDateRange} setToggleDateRange={setToggleDateRange} /> */}
+          Last 30 Days
         </div>
         <div className="filter-dropdown">
           <Link className="btn btn-md btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 10" data-bs-auto-close="outside">

@@ -1,0 +1,48 @@
+// src/data/dashboardMetricsData.js
+
+export const dashboardMetricsData = [
+  {
+    id: 1,
+    title: "Users",
+    metric: "12,430",
+    trend: "↑ +12% vs last month",
+    progress: 78,
+    description: "Total registered users",
+    icon: "👥",
+    color: "bg-blue-500",
+    link: "/admin/users",
+  },
+  {
+    id: 2,
+    title: "Billing",
+    metric: "312 / 600",
+    trend: "→ stable from last month",
+    progress: 52,
+    description: "Number of active subscriptions",
+    icon: "💳",
+    color: "bg-green-500",
+    link: "/admin/subscriptions",
+  },
+  {
+    id: 3,
+    title: "Content",
+    metric: "58",
+    trend: "↑ +8% vs last month",
+    progress: 63,
+    description: "Published public projects",
+    icon: "📘",
+    color: "bg-purple-500",
+    link: "/admin/projects",
+  },
+  {
+    id: 4,
+    title: "Support",
+    metric: "45",
+    trend: "↓ -5% vs last month",
+    progress: 41,
+    description: "Open unresolved support tickets",
+    icon: "🧩",
+    color: "bg-red-500",
+    link: "/admin/tickets",
+  },
+];

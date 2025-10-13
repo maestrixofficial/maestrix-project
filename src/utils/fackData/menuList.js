@@ -3,7 +3,7 @@ import { id } from "date-fns/locale";
 export const menuList = [
   {
     id: 0,
-    name: "dashboards",
+    name: "dashboard",
     path: "/",
     icon: "feather-airplay",
     dropdownMenu: [
@@ -163,26 +163,44 @@ export const menuList = [
     // id: 4,
     id: 5,
 
-    name: "payment",
+    name: "billing & subscriptions",
     path: "#",
     icon: "feather-dollar-sign",
     dropdownMenu: [
+      // {
+      //   id: 1,
+      //   name: "Payment",
+      //   path: "/payment/list",
+      //   subdropdownMenu: false,
+      // },
+      // {
+      //   id: 2,
+      //   name: "Invoice View",
+      //   path: "/payment/view",
+      //   subdropdownMenu: false,
+      // },
+      // {
+      //   id: 4,
+      //   name: "Invoice Create",
+      //   path: "/payment/create",
+      //   subdropdownMenu: false,
+      // },
       {
         id: 1,
-        name: "Payment",
-        path: "/payment/list",
+        name: "subscriptions",
+        path: "/subscriptions/list",
         subdropdownMenu: false,
       },
       {
         id: 2,
-        name: "Invoice View",
-        path: "/payment/view",
+        name: "coupons",
+        path: "/subscriptions/coupon",
         subdropdownMenu: false,
       },
       {
         id: 4,
         name: "Invoice Create",
-        path: "/payment/create",
+        path: "subscriptions/create",
         subdropdownMenu: false,
       },
     ],
@@ -219,12 +237,12 @@ export const menuList = [
         path: "/users/list",
         subdropdownMenu: false,
       },
-      {
-        id: 2,
-        name: "Users View",
-        path: "/users/view",
-        subdropdownMenu: false,
-      },
+      // {
+      //   id: 2,
+      //   name: "Users View",
+      //   path: "/users/view",
+      //   subdropdownMenu: false,
+      // },
       {
         id: 3,
         name: "Users Create",
@@ -274,12 +292,12 @@ export const menuList = [
         path: "/projects/list",
         subdropdownMenu: false,
       },
-      {
-        id: 2,
-        name: "Projects View",
-        path: "/projects/view",
-        subdropdownMenu: false,
-      },
+      // {
+      //   id: 2,
+      //   name: "Projects View",
+      //   path: "/projects/view",
+      //   subdropdownMenu: false,
+      // },
       {
         id: 3,
         name: "Projects Create",
@@ -290,10 +308,10 @@ export const menuList = [
   },
   {
     id: 8,
-    name :"testimonials",
+    name: "announcements",
     path: "/testimonials",
     icon: "feather-file-text",
-dropdownMenu:[],
+    dropdownMenu: [],
   },
   {
     id: 9,
@@ -422,142 +440,142 @@ dropdownMenu:[],
   },
   {
     id: 11,
-    name: "authentication",
+    name: "audit logs",
     path: "#",
     icon: "feather-power",
     dropdownMenu: [
-      {
-        id: 1,
-        name: "login",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/login/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/login/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/login/creative",
-          },
-        ],
-      },
-      {
-        id: 2,
-        name: "register",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/register/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/register/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/register/creative",
-          },
-        ],
-      },
-      {
-        id: 3,
-        name: "Error 404",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/404/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/404/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/404/creative",
-          },
-        ],
-      },
-      {
-        id: 4,
-        name: "Reset Pass",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/reset/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/reset/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/reset/creative",
-          },
-        ],
-      },
-      {
-        id: 5,
-        name: "Verify OTP",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/verify/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/verify/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/verify/creative",
-          },
-        ],
-      },
-      {
-        id: 6,
-        name: "Maintenance",
-        path: "#",
-        subdropdownMenu: [
-          {
-            id: 1,
-            name: "Cover",
-            path: "/authentication/maintenance/cover",
-          },
-          {
-            id: 2,
-            name: "Minimal",
-            path: "/authentication/maintenance/minimal",
-          },
-          {
-            id: 3,
-            name: "Creative",
-            path: "/authentication/maintenance/creative",
-          },
-        ],
-      },
+    //   {
+    //     id: 1,
+    //     name: "login",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/login/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/login/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/login/creative",
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 2,
+    //     name: "register",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/register/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/register/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/register/creative",
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 3,
+    //     name: "Error 404",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/404/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/404/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/404/creative",
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 4,
+    //     name: "Reset Pass",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/reset/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/reset/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/reset/creative",
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 5,
+    //     name: "Verify OTP",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/verify/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/verify/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/verify/creative",
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 6,
+    //     name: "Maintenance",
+    //     path: "#",
+    //     subdropdownMenu: [
+    //       {
+    //         id: 1,
+    //         name: "Cover",
+    //         path: "/authentication/maintenance/cover",
+    //       },
+    //       {
+    //         id: 2,
+    //         name: "Minimal",
+    //         path: "/authentication/maintenance/minimal",
+    //       },
+    //       {
+    //         id: 3,
+    //         name: "Creative",
+    //         path: "/authentication/maintenance/creative",
+    //       },
+    //     ],
+    //   },
     ],
   },
   //   {
@@ -586,4 +604,18 @@ dropdownMenu:[],
   //       },
   //     ],
   //   },
+  {
+    id: 12,
+    name: "datasets",
+    path: "#",
+    icon: "feather-database",
+    dropdownMenu: [],
+  },
+  {
+    id: 13,
+    name: "support & tickets",
+    path: "#",
+    icon: "feather-tool",
+    dropdownMenu: [],
+  },
 ];

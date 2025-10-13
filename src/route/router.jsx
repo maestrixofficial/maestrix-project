@@ -73,6 +73,9 @@ import { UsersList } from "../pages/users-list";
 import { UsersView } from "../pages/users-view";
 import { UsersCreate } from "../pages/users-create";
 import Testimonials from "../pages/testimonials";
+import SubscriptionsView from "../pages/subscriptions-view";
+import SubscriptionsCreate from "../pages/subscriptions-create";
+import { Coupons } from "../pages/subscriptions-coupons";
 
 
 export const router = createBrowserRouter([
@@ -124,17 +127,29 @@ export const router = createBrowserRouter([
                 path: "/proposal/create",
                 element: <ProposalCreate />
             },
+            // {
+            //     path: "/payment/list",
+            //     element: <PaymentList />
+            // },
+            // {
+            //     path: "/payment/view",
+            //     element: <PaymentView />
+            // },
+            // {
+            //     path: "/payment/create",
+            //     element: <PaymentCreate />
+            // },
             {
-                path: "/payment/list",
-                element: <PaymentList />
+                path: "/subscriptions/list",
+                element: <SubscriptionsView />
             },
             {
-                path: "/payment/view",
-                element: <PaymentView />
+                path: "/subscriptions/coupon",
+                element: <Coupons />
             },
             {
-                path: "/payment/create",
-                element: <PaymentCreate />
+                path: "/subscriptions/create",
+                element: <SubscriptionsCreate />
             },
             // {
             //     path: "/customers/list",

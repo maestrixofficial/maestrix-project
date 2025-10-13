@@ -15,6 +15,8 @@ import Todos from '@/components/widgetsList/Todos'
 import Footer from '@/components/shared/Footer'
 import { projectsDataTwo } from '@/utils/fackData/projectsDataTwo'
 import Users from '@/components/widgetsTables/Users'
+import DashboardTopSectionStatistics from '@/components/widgetsStatistics/DashboardTopSectionStatistics'
+import { dashboardMetricsData } from '@/utils/dynamicData/dashboardTopSection'
 
 const Home = () => {
     return (
@@ -24,16 +26,22 @@ const Home = () => {
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    <SiteOverviewStatistics />
+                    {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6" > */}
+                        {dashboardMetricsData.map((item) => (
+                            <DashboardTopSectionStatistics key={item.id} {...item} />
+                        ))}
+                    {/* </div> */}
+                   
+                    {/* <SiteOverviewStatistics />
                     <PaymentRecordChart />
                     <SalesMiscellaneous isFooterShow={true} dataList={projectsDataTwo} />
-                    <Todos title={"Todos"} />
+                    <Todos title={"Todos"} /> */}
                     {/* <TasksOverviewChart /> */}
                     {/* <LeadsOverviewChart chartHeight={315} /> */}
                     {/* <LatestLeads title={"Latest Leads"} /> */}
-                    <Schedule title={"Upcoming Schedule"} />
+                    {/* <Schedule title={"Upcoming Schedule"} />
                     <Project cardYSpaceClass="hrozintioal-card" borderShow={true} title="Project Status" />
-                    <Users title={"New Users"} />
+                    <Users title={"New Users"} /> */}
                     {/* <TeamProgress title={"Team Progress"} footerShow={true} /> */} 
 
                 </div>
