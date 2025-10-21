@@ -17,7 +17,11 @@ import { projectsDataTwo } from '@/utils/fackData/projectsDataTwo'
 import Users from '@/components/widgetsTables/Users'
 import DashboardTopSectionStatistics from '@/components/widgetsStatistics/DashboardTopSectionStatistics'
 import { dashboardMetricsData } from '@/utils/dynamicData/dashboardTopSection'
+import DashboardChartSection from '@/components/widgetsCharts/DashboardChartSection'
+import { dashboardChartsData } from '@/utils/dynamicData/dashboardChartSection'
 
+import { staticActivity } from '@/utils/dynamicData/dashboardActivityData'
+import DashboardBottomSection from "../components/widgetsStatistics/dashboardBottomSection";
 const Home = () => {
     return (
         <>
@@ -31,7 +35,13 @@ const Home = () => {
                             <DashboardTopSectionStatistics key={item.id} {...item} />
                         ))}
                     {/* </div> */}
-                   
+                    {dashboardChartsData.map(chart => (
+                        <DashboardChartSection key={chart.id} {...chart} />
+                    ))}
+                    {/* <div className="col-xl-4 col-md-12"><RecentActivityFeed activities={staticActivity.recentActivities} /></div>
+                    <div className="col-xl-4 col-md-12"><TopProjectsTable projects={staticActivity.topProjects} /></div>
+                    <div className="col-xl-4 col-md-12"><SupportTicketsTable tickets={staticActivity.supportTickets} /></div> */}
+                    <DashboardBottomSection/>
                     {/* <SiteOverviewStatistics />
                     <PaymentRecordChart />
                     <SalesMiscellaneous isFooterShow={true} dataList={projectsDataTwo} />
